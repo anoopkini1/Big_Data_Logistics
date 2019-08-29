@@ -5,7 +5,8 @@ Created on 29-Aug-2019 by Anoop Kini
 The code is written for SQL. "MySQL", a relational database software could be suitable. 
 
 ## Project Details:
-In the DVD rental cumilative project addresses the following three aspects in detail. This is a "Big Data" case study from the Logistics setor.
+"DVD rental" cumilative project addresses the following three aspects in detail. This is a "Big Data" case study from the Logistics setor.
+
 * Project 1: The user can obtain the rental_count for a movie name while also naming the categorized movie type.
 * Project 2: Length of rental duration of these family friendly movies, Quartile count across all movies -categories
 * Project 3: Count of movies for each quartile and for each movie category
