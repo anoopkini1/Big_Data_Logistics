@@ -1,8 +1,8 @@
 # Big_Data_Logistics
-Created on 29.Aug.2019 by Anoop Kini
+Created on 29-Aug-2019 by Anoop Kini
 
 ## Programming language of source code
-The code is written for SQL. "MySQL" a relational database sooftware could be suitable. 
+The code is written for SQL. "MySQL", a relational database software could be suitable. 
 
 ## Project Details:
 In the DVD rental cumilative project addresses the following three aspects in detail. This is a "Big Data" case study from the Logistics setor.
