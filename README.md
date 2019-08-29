@@ -15,4 +15,4 @@ Provided from "Udacity: Programming for Data-Science course"
 
 ## References:
 * http://starpowersolar.us/entity-relationship-diagram-symbols/ (Illustrates Entity Relationashp Diagram)
-* https://www.sqlstyle.guide/ (for indentaion of the code)
+* https://www.sqlstyle.guide/ (Illustrates indentaion of the code)
