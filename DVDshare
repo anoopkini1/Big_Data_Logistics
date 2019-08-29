@@ -15,3 +15,63 @@ SELECT f.title movie_name, c.name category_name, COUNT(*) rental_count
  WHERE c.name IN ('Animation','Children','Classic','Comedy','Family','Music')
  GROUP BY 1,2
  ORDER BY 2,1 
+
+     //Project 2//
+
+WITH t1 AS
+(SELECT f.title movie_name, 
+        c.name category_name, 
+        f.rental_duration rental_duration,
+        f.rental_duration/f.rental_duration unify
+
+	FROM film_category fc
+	JOIN category c
+	  ON fc.category_id=c.category_id
+	JOIN film f
+	  ON fc.film_id = f.film_id
+ WHERE c.name IN ('Animation','Children','Classics','Comedy','Family','Music')
+ GROUP BY 1,2,3
+ ORDER BY 3)
+
+SELECT t1.movie_name, 
+       t1.category_name, 
+       t1.rental_duration, 
+       NTILE(4) OVER (PARTITION BY unify ORDER BY t1.rental_duration)AS standard_quartile
+
+	FROM t1
+	ORDER BY 4
+
+
+      //Project 3//
+
+WITH t1 AS
+(SELECT  f.title movie_name, 
+         c.name category_name,
+         f.rental_duration rental_duration
+
+	FROM film_category fc
+	JOIN category c
+	  ON fc.category_id=c.category_id
+	JOIN film f
+	  ON fc.film_id = f.film_id
+	WHERE c.name IN ('Animation','Children','Classics','Comedy','Family','Music')
+	GROUP BY 1,2,3
+	ORDER BY 2,3),
+
+t2 AS 
+(SELECT t1.movie_name movie_name, 
+        t1.category_name category_name,
+        t1.rental_duration rental_duration,
+        NTILE(4) OVER main_window AS standard_quartile
+
+FROM t1
+WINDOW main_window AS (PARTITION BY category_name ORDER BY rental_duration)
+)
+
+SELECT t2.category_name category_name,       
+       t2.standard_quartile standard_quartile,
+       count(*) count
+
+	FROM t2
+	GROUP BY 1,2
+	ORDER BY 1,2;  
