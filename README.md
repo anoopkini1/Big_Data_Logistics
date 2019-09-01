@@ -13,8 +13,10 @@ The code is written for SQL. "MySQL", a relational database software could be su
 * Project 4: Returns "Rental-count" for each of the two stores, for a given month of a year.
 
 ## DataSets:
-Provided from "Udacity: Programming for Data-Science course"
+* http://www.postgresqltutorial.com/postgresql-sample-database/ (PostgreSQL sample database)
+* Provided from "Udacity: Programming for Data-Science course"
 
 ## References:
 * http://starpowersolar.us/entity-relationship-diagram-symbols/ (Illustrates Entity Relationashp Diagram)
 * https://www.sqlstyle.guide/ (Illustrates indentaion of the code)
+* https://sql-format.com/ (Online site for code indentation)
