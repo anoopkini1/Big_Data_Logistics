@@ -10,6 +10,7 @@ The code is written for SQL. "MySQL", a relational database software could be su
 * Project 1: The user can obtain the rental_count for a movie name while also naming the categorized movie type.
 * Project 2: Length of rental duration of these family friendly movies, Quartile count across all movies -categories
 * Project 3: Count of movies for each quartile and for each movie category
+* Project 4: Returns "Rental-count" for each of the two stores, for a given month of a year.
 
 ## DataSets:
 Provided from "Udacity: Programming for Data-Science course"
