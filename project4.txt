@@ -1,0 +1,22 @@
+WITH t1
+AS (SELECT
+  DATE_PART ('month', ren.rental_date AT time ZONE 'UTC') AS Rental_month,
+DATE_PART ('year', ren.rental_date AT time ZONE 'UTC') AS Rental_year,
+inv.store_id Store_ID,
+ren.rental_id Rental_ID
+
+FROM rental ren
+JOIN inventory inv
+  ON ren.inventory_id = inv.inventory_id)
+
+SELECT
+  t1.rental_month AS Rental_month,
+  t1.rental_year AS Rental_year,
+  t1.store_id AS Store_id,
+  COUNT(*) Count_Rental
+
+FROM t1
+GROUP BY 1,
+         2,
+         3
+ORDER BY 4 DESC;
